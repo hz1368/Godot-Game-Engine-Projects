@@ -34,8 +34,8 @@ func spawn_coins():
 		var c = Coin.instance()
 		$CoinContainer.add_child(c)
 		c.screensize = screensize
-		c.position = Vector2(rand_range(0, screensize.x),
-							 rand_range(0, screensize.y))
+		c.position = Vector2(randf_range(0, screensize.x),
+							 randf_range(0, screensize.y))
 
 func _process(delta):
 	if playing and $CoinContainer.get_child_count() == 0:
@@ -78,5 +78,5 @@ func _on_PowTimer_timeout():
 	var p = Powerup.instance()
 	add_child(p)
 	p.screensize = screensize
-	p.position = Vector2(rand_range(0, screensize.x),
-						 rand_range(0, screensize.y))
+	p.position = Vector2(randf_range(0, screensize.x),
+						 randf_range(0, screensize.y))
